@@ -228,6 +228,12 @@ func newEtcdClient(machines []string, certFile, keyFile, caFile, username, passw
 	if err != nil {
 		return nil, err
 	}
+	
+	err = cli.Sync(context.Background())
+	if err != nil {
+		return nil, err
+	}
+	
 	return etcd.NewKeysAPI(cli), nil
 }
 

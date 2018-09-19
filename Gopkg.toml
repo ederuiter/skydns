@@ -23,6 +23,10 @@
 #   non-go = false
 #   go-tests = true
 #   unused-packages = true
+[[constraint]]
+  name = "github.com/skynetservices/skydns"
+  branch = "master"
+  source = "github.com/ederuiter/skydns"
 
 [[override]]
   name = "github.com/ugorji/go"
